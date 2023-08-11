@@ -62,32 +62,57 @@ namespace TestP335
 
 
 
+            Console.Write("enter arr lenght: ");
+            int lenht= int.Parse(Console.ReadLine());
+            int[] ints = new int[lenht];
+
+            for (int i = 0; i < lenht; i++)
+            {
+                Console.WriteLine($"enter {i+1}. number");
+                ints[i] = int.Parse(Console.ReadLine());
+            }
+
+            int small = ints[0];
+            int large = ints[0];
+
+            for (int i = 0; i < lenht; i++)
+            {
+                if (ints[i] > large)
+                {
+                    large= ints[i];
+                }
+                if (ints[i] < small)
+                {
+                    small= ints[i];
+                }
+            }
+
 
 
             //3 
 
-            Console.Write("Please enter Array's lenght: ");
-            int lenght = int.Parse(Console.ReadLine());
+            //Console.Write("Please enter Array's lenght: ");
+            //int lenght = int.Parse(Console.ReadLine());
 
-            int[] array = new int[lenght];
+            //int[] array = new int[lenght];
 
-            for (int i = 0; i < lenght; i++)
-            {
-                Console.Write($"Enter {i + 1}. number: ");
-                array[i] = int.Parse(Console.ReadLine());
-            }
+            //for (int i = 0; i < lenght; i++)
+            //{
+            //    Console.Write($"Enter {i + 1}. number: ");
+            //    array[i] = int.Parse(Console.ReadLine());
+            //}
 
-            int ciftToplam = 0;
+            //int evenTotal = 0;
 
-            foreach (int number in array)
-            {
-                if (number % 2 == 0)
-                {
-                    ciftToplam += number;
-                }
-            }
+            //foreach (int number in array)
+            //{
+            //    if (number % 2 == 0)
+            //    {
+            //        evenTotal += number;
+            //    }
+            //}
 
-            Console.WriteLine($"Çift sayıların toplamı: {ciftToplam}");
+            //Console.WriteLine($"Total of even numbers: {evenTotal}");
 
 
 
