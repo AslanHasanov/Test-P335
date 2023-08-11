@@ -9,103 +9,194 @@ namespace TestP335
     {
         static void Main(string[] args)
         {
+            //1
 
+            //Console.Write("Please enter Array's lenght: ");
+            //int lenght = int.Parse(Console.ReadLine());
 
-            //// Simple string concatenation
-            //Console.WriteLine("Hello" + " " + "String " + "!");
-
-            //string firstName = "Mahesh";
-            //string lastName = "Chand";
-
-            //string name = firstName + " " + lastName;
-            //Console.WriteLine(name);
-
-
-
-            //// String Interpolation
-            //string author = "Mahesh Chand";
-            //string book = "C# Programming";
-
-            //string bookAuthor = $"{author} is the author of {book}.";
-            //Console.WriteLine(bookAuthor);
-
-            ////............................if..................................//
-
-            ////int number = 2;
-            ////if (number < 5)
-            ////{
-            ////    Console.WriteLine(number+" is less than 5" );
-            ////}
-
-
-            //int number = 12;
-
-            //if (number < 5)
+            //int total = 0;
+            //for (int i = 0; i < lenght; i++)
             //{
-            //    Console.WriteLine(number+ " is less than 5");
-            //}
-            //else
-            //{
-            //    Console.WriteLine(number + " is greater than or equal to 5");
+            //    Console.Write($"Enter {i + 1}. number: ");
+            //    int number = int.Parse(Console.ReadLine());
+            //    total += number;
             //}
 
-            string word1 = "tree";
-            string word2 = "eter";
+            //Console.WriteLine($"Total of arrays numbers: {total}");
 
-            bool areAnagrams = true;
 
-            if (word1.Length != word2.Length)
+
+
+
+            //2
+
+            //Console.Write("Please enter Array's lenght: ");
+            //int arrayLenght = int.Parse(Console.ReadLine());
+
+            //int[] array = new int[arrayLenght];
+
+            //for (int i = 0; i < arrayLenght; i++)
+            //{
+            //    Console.Write($"Enter {i + 1}. number: ");
+            //    array[i] = int.Parse(Console.ReadLine());
+            //}
+
+            //int small = array[0];
+            //int large = array[0];
+
+            //for (int i = 1; i < arrayLenght; i++)
+            //{
+            //    if (array[i] > large)
+            //    {
+            //        large = array[i];
+            //    }
+
+            //    if (array[i] < small)
+            //    {
+            //        small = array[i];
+            //    }
+            //}
+
+            //Console.WriteLine($"Largest number: {large}");
+            //Console.WriteLine($"Smallest number: {small}");
+
+
+
+
+
+            //3 
+
+            Console.Write("Please enter Array's lenght: ");
+            int lenght = int.Parse(Console.ReadLine());
+
+            int[] array = new int[lenght];
+
+            for (int i = 0; i < lenght; i++)
             {
-                areAnagrams = false;
+                Console.Write($"Enter {i + 1}. number: ");
+                array[i] = int.Parse(Console.ReadLine());
             }
-            else
+
+            int ciftToplam = 0;
+
+            foreach (int number in array)
             {
-                for (int i = 0; i < word1.Length; i++)
+                if (number % 2 == 0)
                 {
-                    bool found = false;
-                    for (int j = 0; j < word2.Length; j++)
-                    {
-                        if (word1[i] == word2[j])
-                        {
-                            found = true;
-                            word2 = word2.Remove(j, 1);
-
-
-                            break;
-                        }
-                    }
-                    if (!found)
-                    {
-                        areAnagrams = false;
-                        break;
-                    }
+                    ciftToplam += number;
                 }
             }
-                Console.WriteLine(areAnagrams);
+
+            Console.WriteLine($"Çift sayıların toplamı: {ciftToplam}");
 
 
 
-            for (int row = 8; row >= 1; --row)
-            {
-                for (int col = 1; col <= row; ++col)
-                {
-                    Console.Write("*");
-                }
-
-                Console.WriteLine();
-            }
 
 
-            for (int row = 1; row <= 8; ++row)
-            {
-                for (int col = 1; col <= row; ++col)
-                {
-                    Console.Write("*");
-                }
 
-                Console.WriteLine();
-            }
+
+
+
+
+            //4 app
+
+            //1.Bizə elə bir method lazımdır ki, biz ora öz textimizi göndərdikdə, o textdə olan bütün kiçik hərflər, böyükləri ilə əvəz olunsun,
+            //və həmin methodun çağırıldığı yerə dəyişdirilmiş  nəticəni qaytarsın. 
+
+            //Nümünə:    Richard McClintock, a Latin professor   -> RICHARD MCCLINTOCK, A LATIN PROFESSOR
+
+            //NOTES:     Yalnız ingilis hərflərini nəzərə almaq kifayət edir.  Hazır methodlardan yalnız, Replace() istifadə etmək olar.
+
+
+
+
+
+
+
+            //2.Bizə elə bir method lazımdır ki, biz ora öz textimizi göndərdikdə, o textdə olan bütün böyük hərflər, kiçikləri ilə əvəz olunsun,
+            //və həmin methodun çağırıldığı yerə dəyişdirilmiş nəticəni qaytarsın. 
+
+            //Nümünə:      RICHARD MCCLINTOCK, A LATIN PROFESSOR -> richard mcclintock, a latin professor
+
+            //NOTES:       Yalnız ingilis hərflərini nəzərə alma¬¬q kifayət edir.   Hazır methodlardan yalnız, Replace istifadə etmək olar.
+
+
+
+
+
+
+
+            //3.Bizə elə bir method lazımdır ki, göndərilən textin daxilində,  digər bir characterin var olub - olmaması barəsində bizi məlumatlandırsın.
+
+
+
+
+            //        string command1 = "Change The Big Letter";
+            //        string command2 = "Change The Small Letter";
+            //        string command3 = "Choose The Letter";
+            //        Console.WriteLine(command1);
+            //        Console.WriteLine(command2);
+            //        Console.WriteLine(command3);
+            //        Console.WriteLine();
+
+            //        char[] TargetBiggLetter = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+            //        char[] TargetSmallLetter = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+
+            //        while (true)
+            //        {
+            //            Console.Write("Enter Your Command : ");
+            //            string command = Console.ReadLine();
+
+            //            if (command == command1)
+            //            {
+            //                Console.Write("Enter Your Text :");
+            //                string targetTXT = Console.ReadLine();
+            //                for (int i = 0; i < TargetBiggLetter.Length; i++)
+            //                {
+            //                    targetTXT = targetTXT.Replace(TargetSmallLetter[i], TargetBiggLetter[i]);
+            //                }
+            //                Console.WriteLine(targetTXT);
+            //            }
+            //            else if (command == command2)
+            //            {
+            //                Console.Write("Enter Your Text :");
+            //                string targetTXT = Console.ReadLine();
+            //                for (int i = 0; i < TargetSmallLetter.Length; i++)
+            //                {
+            //                    targetTXT = targetTXT.Replace(TargetBiggLetter[i], TargetSmallLetter[i]);
+            //                }
+            //                Console.WriteLine(targetTXT);
+            //            }
+            //            else if (command == command3)
+            //            {
+
+            //                Console.Write("Enter Your Text :");
+            //                string targetTXT = Console.ReadLine();
+
+            //                Console.Write("Enter Your Char :");
+            //                string character = Console.ReadLine();
+
+            //                Console.WriteLine(IsContain(targetTXT, character));
+            //            }
+            //            else { break; }
+
+            //        }
+            //    }
+            //    public static bool IsContain(string targetTxt, string targetChar)
+            //    {
+            //        for (int i = 0; i < targetTxt.Length; i++)
+            //        {
+            //            if (targetTxt[i] == targetChar[0])
+            //            {
+            //                Console.Write("Contain :");
+            //                return true;
+            //            }
+            //        }
+            //        Console.Write("IsContain : ");
+            //        return false;
+            //    }
 
         }
     }
+
 }
